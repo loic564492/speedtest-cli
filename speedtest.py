@@ -388,7 +388,7 @@ class SpeedtestMissingBestServer(SpeedtestException):
 
 
 def create_connection(address, timeout=_GLOBAL_DEFAULT_TIMEOUT, source_address=None):
-    """Connect to *address* and return the socket object.
+   # """Connect to *address* and return the socket object.
 
     Convenience function.  Connect to *address* (a 2-tuple ``(host,
     port)``) and return the socket object.  Passing the optional
@@ -397,10 +397,10 @@ def create_connection(address, timeout=_GLOBAL_DEFAULT_TIMEOUT, source_address=N
     global default timeout setting returned by :func:`getdefaulttimeout`
     is used.  If *source_address* is set it must be a tuple of (host, port)
     for the socket to bind as a source address before making the connection.
-    An host of '' or port 0 tells the OS to use the default.
+    #An host of '' or port 0 tells the OS to use the default.
 
-    Largely vendored from Python 2.7, modified to work with Python 2.4
-    """
+    #Largely vendored from Python 2.7, modified to work with Python 2.4
+    #"""
     host, port = address
     err = None
     for res in socket.getaddrinfo(host, port, 0, socket.SOCK_STREAM):
